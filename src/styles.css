@@ -1,0 +1,227 @@
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: rgb(199, 196, 196);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-image: url(./img/background.jpg);
+}
+
+/* Parent container */
+.papa-joe {
+  background-color: #a7a7a7;
+  width: 380px;
+  height: 630px;
+  border-radius: 12px 12px 70px 12px;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 10px #000000, 0 0 40px #000000, 0 0 80px #000000;
+  top: 35px;
+}
+
+/* Screen / display */
+.marco {
+  background-color: #485158;
+  width: 310px;
+  height: 280px;
+  border-radius: 12px 12px 70px 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 25px;
+}
+
+.pantalla {
+  background-color: rgb(99, 165, 0);
+  height: 230px;
+  width: 210px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #63a5003e, 0 0 40px #63a5003e, 0 0 80px #63a5003e;
+  display: grid;
+  place-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.resultados {
+  height: 26px;
+  width: 155px;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  border: solid;
+  border-left: #000000;
+  border-top: #000000;
+  border-right: #000000;
+}
+
+/* Boot screen */
+.boot-screen {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(99, 165, 0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.boot-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.boot-logo {
+  font-size: 3.2px;
+  line-height: 1.1;
+  white-space: pre;
+  color: #1a3d00;
+  font-family: monospace;
+  text-shadow: 0 0 4px #1a3d0088;
+  overflow: hidden;
+  max-height: 0;
+  animation: scan-in 1.8s steps(18, end) forwards;
+}
+
+@keyframes scan-in {
+  from { max-height: 0; }
+  to   { max-height: 200px; }
+}
+
+/* Bottom buttons */
+.marco-t {
+  display: flex;
+  width: 380px;
+  height: 320px;
+  position: absolute;
+  top: 315px;
+  border-radius: 12px 12px 70px 12px;
+}
+
+.cruz {
+  height: 320px;
+  width: 190px;
+}
+
+.signos {
+  color: rgb(74, 74, 74);
+  font-size: x-large;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+
+.signos:hover {
+  background-color: #1c1c1c;
+  box-shadow: 0 0 10px #000000bd, 0 0 40px #000000bd, 0 0 80px #000000bd;
+  color: #000000;
+  cursor: pointer;
+}
+
+.signos1 {
+  align-items: center;
+  display: flex;
+  background-color: black;
+  height: 52px;
+  width: 26px;
+  position: absolute;
+  box-shadow: 0 0 10px #0000003e, 0 0 40px #0000003e, 0 0 80px #0000003e;
+}
+
+.signos2 {
+  align-items: center;
+  display: flex;
+  background-color: black;
+  height: 26px;
+  width: 52px;
+  position: absolute;
+  box-shadow: 0 0 10px #0000003e, 0 0 40px #0000003e, 0 0 80px #0000003e;
+}
+
+.up {
+  top: 28px;
+  left: 64px;
+  border-radius: 5px 5px 11px 11px;
+  justify-content: baseline;
+  flex-direction: column;
+}
+
+.down {
+  top: 100px;
+  left: 64px;
+  border-radius: 11px 11px 5px 5px;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.left {
+  top: 77px;
+  left: 16px;
+  border-radius: 5px 11px 11px 5px;
+  justify-content: left;
+}
+
+.right {
+  top: 77px;
+  left: 90px;
+  border-radius: 11px 5px 5px 11px;
+  justify-content: right;
+}
+
+.btns {
+  display: flex;
+  width: 260px;
+  height: 320px;
+  border-radius: 12px 12px 70px 12px;
+}
+
+.bts-r {
+  background-color: rgb(196, 1, 1);
+  border-radius: 100px;
+  height: 58px;
+  width: 58px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  box-shadow: 0 0 10px #0000003e, 0 0 40px #0000003e, 0 0 80px #0000003e;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bts-r:hover {
+  background-color: red;
+  box-shadow: 0 0 10px #ff000047, 0 0 40px #ff000047, 0 0 80px #ff000047;
+  cursor: pointer;
+}
+
+.igual {
+  top: 76px;
+  right: 100px;
+}
+
+.clear {
+  top: 24px;
+  right: 26px;
+}
+
+.c0 {
+  grid-column: 2;
+}
+
+.teclas {
+  opacity: 0.2;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.teclas:hover {
+  opacity: 0.75;
+  transition: opacity 0.4s ease;
+}
