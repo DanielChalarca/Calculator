@@ -1,3 +1,4 @@
+/* Base font */
 * {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -24,7 +25,7 @@ body {
   top: 35px;
 }
 
-/* Screen / display */
+/* Screen / display — position relative anchors the boot screen overlay */
 .marco {
   background-color: #485158;
   width: 310px;
@@ -50,6 +51,7 @@ body {
   overflow: hidden;
 }
 
+/* Result display — spans full top row of the grid */
 .resultados {
   height: 26px;
   width: 155px;
@@ -61,7 +63,7 @@ body {
   border-right: #000000;
 }
 
-/* Boot screen */
+/* Boot screen — overlays .pantalla, removed from DOM after animation */
 .boot-screen {
   position: absolute;
   inset: 0;
@@ -92,6 +94,7 @@ body {
   animation: scan-in 1.8s steps(18, end) forwards;
 }
 
+/* Scanline reveal — steps() mimics line-by-line CRT rendering */
 @keyframes scan-in {
   from { max-height: 0; }
   to   { max-height: 200px; }
@@ -107,6 +110,7 @@ body {
   border-radius: 12px 12px 70px 12px;
 }
 
+/* D-pad operator buttons */
 .cruz {
   height: 320px;
   width: 190px;
@@ -125,6 +129,7 @@ body {
   cursor: pointer;
 }
 
+/* Vertical arms of the D-pad (+ and -) */
 .signos1 {
   align-items: center;
   display: flex;
@@ -135,6 +140,7 @@ body {
   box-shadow: 0 0 10px #0000003e, 0 0 40px #0000003e, 0 0 80px #0000003e;
 }
 
+/* Horizontal arms of the D-pad (× and ÷) */
 .signos2 {
   align-items: center;
   display: flex;
@@ -182,6 +188,7 @@ body {
   border-radius: 12px 12px 70px 12px;
 }
 
+/* Action buttons — C and = */
 .bts-r {
   background-color: rgb(196, 1, 1);
   border-radius: 100px;
